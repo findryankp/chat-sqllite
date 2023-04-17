@@ -1,0 +1,93 @@
+{
+	"info": {
+		"_postman_id": "fc8abb3e-b45f-4ac6-92e2-2697f540d081",
+		"name": "Chat",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5405731"
+	},
+	"item": [
+		{
+			"name": "Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "from_user",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "to_user",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "message",
+							"value": "test",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/chats",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"chats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Copy",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "from_user",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "to_user",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "message",
+							"value": "test",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/chats/1/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"chats",
+						"1",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
